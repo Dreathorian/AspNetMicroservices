@@ -1,0 +1,11 @@
+xamarin / xamarin forms (mvvm) .net nodejs typescript
+
+// planyou
+.net 6 backend
+
+xamarin
+tim senior 
+ahmed
+
+react jotai
+frontend react hauptsächlich

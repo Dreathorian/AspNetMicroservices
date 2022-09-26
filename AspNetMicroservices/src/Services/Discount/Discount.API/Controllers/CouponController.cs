@@ -16,7 +16,7 @@ public class DiscountController : ControllerBase
         _repository = repository ?? throw new ArgumentNullException(nameof(repository));
     }
 
-    [HttpGet("{productName}", Name = "GetDiscount")]
+    [HttpGet("{productName}", Name = nameof(GetDiscount))]
     [ProducesResponseType(typeof(Coupon), (int)HttpStatusCode.OK)]
     public async Task<ActionResult<Coupon>> GetDiscount(string productName)
     {
@@ -29,7 +29,7 @@ public class DiscountController : ControllerBase
     public async Task<ActionResult<Coupon>> CreateDiscount([FromBody] Coupon coupon)
     {
         await _repository.CreateDiscount(coupon);
-        return CreatedAtRoute("GetDiscount", new { productName = coupon.ProductName }, coupon);
+        return CreatedAtRoute(nameof(GetDiscount), new { productName = coupon.ProductName }, coupon);
     }
 
     [HttpPut]
@@ -39,7 +39,7 @@ public class DiscountController : ControllerBase
         return Ok(await _repository.UpdateDiscount(coupon));
     }
 
-    [HttpDelete("{productName}", Name = "DeleteDiscount")]
+    [HttpDelete("{productName}", Name = nameof(DeleteDiscount))]
     [ProducesResponseType(typeof(void), (int)HttpStatusCode.OK)]
     public async Task<ActionResult<bool>> DeleteDiscount(string productName)
     {

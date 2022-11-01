@@ -18,7 +18,7 @@ public class DiscountService : DiscountProtoService.DiscountProtoServiceBase
         _logger = logger;
         _mapper = mapper;
     }
-
+    
     public override async Task<CouponModel> GetDiscount(GetDiscountRequest request, ServerCallContext context)
     {
         var coupon = await _repository.GetDiscount(request.ProductName);

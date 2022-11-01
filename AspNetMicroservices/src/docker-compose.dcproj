@@ -7,6 +7,8 @@
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
     <DockerServiceName>catalog.api</DockerServiceName>
+    <Configurations>Debug;Release</Configurations>
+    <Platforms>AnyCPU</Platforms>
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">
@@ -14,5 +16,13 @@
     </None>
     <None Include="docker-compose.yml" />
     <None Include=".dockerignore" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="elastic.env" />
+    <Content Include="elasticConfig.env" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="elasticConfig.env" />
+    <Content Include="elastic.env" />
   </ItemGroup>
 </Project>

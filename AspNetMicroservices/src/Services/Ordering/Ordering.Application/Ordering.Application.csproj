@@ -7,18 +7,19 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Ordering.Domain\Ordering.Domain.csproj" />
+        <ProjectReference Include="..\Ordering.Domain\Ordering.Domain.csproj"/>
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
-      <PackageReference Include="FluentValidation" Version="11.2.2" />
-      <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.2.2" />
-      <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
-      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.9" />
-      <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.2" />
-      <Folder Include="Contracts" />
-      <Folder Include="Features" />
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0"/>
+        <PackageReference Include="FluentValidation" Version="11.2.2"/>
+        <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.2.2"/>
+        <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.9"/>
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.2"/>
+        <Folder Include="Behaviours"/>
+        <Folder Include="Contracts"/>
+        <Folder Include="Features"/>
     </ItemGroup>
 
 </Project>
